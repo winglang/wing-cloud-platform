@@ -1,12 +1,14 @@
 import { typescript } from 'projen';
 const project = new typescript.TypeScriptProject({
   defaultReleaseBranch: 'main',
-  name: 'wing-platform',
+  name: 'wing-cloud-platform',
   projenrcTs: true,
-
-  // deps: [],                /* Runtime dependencies of this module. */
-  // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
-  // devDeps: [],             /* Build dependencies for this module. */
-  // packageName: undefined,  /* The "name" in package.json. */
+  peerDeps: ["@winglang/sdk"],
+  description: "Wing Cloud Platform for testing all the way to production",
+  packageName: "@winglang/wing-platform",
+  releaseToNpm: true,
+  authorOrganization: true,
+  authorName: "Wing",
+  authorUrl: "https://winglang.io",
 });
 project.synth();
