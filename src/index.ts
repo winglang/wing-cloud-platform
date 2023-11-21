@@ -1,5 +1,3 @@
-export class Hello {
-  public sayHello() {
-    return 'hello, world!';
-  }
-}
+import { TestPlatform } from './test-platform';
+
+export const Platform = TestPlatform;
